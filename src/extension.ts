@@ -27,8 +27,8 @@ export function activate(ctx: ExtensionContext) {
 }
 
 export class AudioPlay {
+    private _playExe_path:string = path.join(__dirname, '..', '..', 'audio', 'play.exe');    
     private _keypress_path:string = path.join(__dirname, '..', '..', 'audio', 'typewriter-key-1.wav');
-    private _playExe_path:string = path.join(__dirname, '..', '..', 'audio', 'play.exe');
     private _carriagereturn_path:string = path.join(__dirname, '..','..','audio','typewriter-return-1.wav');
     private _isWindows:boolean;
     
