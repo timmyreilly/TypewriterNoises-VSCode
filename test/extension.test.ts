@@ -19,4 +19,15 @@ suite("Extension Tests", () => {
 		assert.equal(-1, [1, 2, 3].indexOf(5));
 		assert.equal(-1, [1, 2, 3].indexOf(0));
 	});
+	
+	test("Audio Playable", () => {
+		let audioPlayer = new myExtension.AudioPlay();
+		assert.doesNotThrow(
+			function () {
+				audioPlayer.playCarriageReturn()
+			},
+			Error
+		)
+	});
+	
 });
