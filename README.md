@@ -6,6 +6,7 @@ Support for Windows and Mac.
 
 ### here's the repo: https://github.com/timmyreilly/TypewriterNoises-VSCode
 
+
 To install and use...
 
 * ctrl+shift+p in Visual Studio Code
@@ -21,10 +22,12 @@ Before I integrate a toggle command the best way to make it stop is...
 * 'Extensions: Show Installed Extensions'
 * Select the remove box 
 
+[Link to Marketplace](https://marketplace.visualstudio.com/items/timreilly.typewriter-sounds)
+
 ### Wooo!
 [Icon Credit](http://www.fancyicons.com/free-icon/101/cms-mini-icon-set/free-publish-icon-png/)
 
-Thanks for all the help [Felix Rieseberg](https://github.com/felixrieseberg) & [Jason Poon](https://github.com/jpoon)
+Thanks for all the help [Felix Rieseberg](https://github.com/felixrieseberg) & [Jason Poon](https://github.com/jpoon).
 
 Thank you [Skwire](http://skwire.dcmembers.com/wb/pages/software/swavplayer.php) for the no GUI wav player.  
 
