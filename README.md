@@ -26,5 +26,7 @@ Before I integrate a toggle command the best way to make it stop is...
 
 Thanks for all the help [Felix Rieseberg](https://github.com/felixrieseberg) & [Jason Poon](https://github.com/jpoon)
 
+Thank you [Skwire](http://skwire.dcmembers.com/wb/pages/software/swavplayer.php) for the no GUI wav player.  
+
 [@timmyreilly](http://twitter.com/timmyreilly)
 
