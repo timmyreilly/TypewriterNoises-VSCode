@@ -1,6 +1,6 @@
 import {window, workspace, commands, Disposable, ExtensionContext, TextDocument} from 'vscode';
 import * as vscode from 'vscode';
-import AudioPlay from './extension';
+import {AudioPlay} from './extension';
 
 export default class EditorObserver {
     private _disposable: Disposable;
@@ -41,7 +41,7 @@ export default class EditorObserver {
         return hasChangd;
     }
     
-    private _onEvent(e: vscode.TextEditorSelectionChangeEvent) {
+    private _onEvent(e: any) {
         if (!this._hasTextChanged(e)) return; 
         let lineChanged = this._hasEnteredReturn(e);
         
