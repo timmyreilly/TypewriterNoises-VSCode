@@ -2,10 +2,25 @@
   "name": "typewriter-sounds",
   "displayName": "typewriter-sounds",
   "description": "This extension makes keystroke and carriage return noises",
-  "version": "0.0.1",
+  "version": "0.1.0",
+  "publisher": "timreilly",
   "engines": {
     "vscode": "^1.78.0"
   },
+  "homepage": "https://github.com/timmyreilly/TypewriterNoises-VSCode",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/timmyreilly/TypewriterNoises-VSCode"
+  },
+  "keywords": [
+    "Sound",
+    "keyboard",
+    "fun",
+    "readme",
+    "repo"
+  ],
+  "icon": "icon.png",
+  "license": "MIT",
   "categories": [
     "Other"
   ],
