@@ -1,52 +1,56 @@
 {
   "name": "typewriter-sounds",
-  "displayName": "Typewriter Sounds",
-  "description": "This extension makes keystroke and carriage return noises as you type your readme and then everywhere else",
-  "version": "0.0.8",
-  "publisher": "timreilly",
+  "displayName": "typewriter-sounds",
+  "description": "This extension makes keystroke and carriage return noises",
+  "version": "0.0.1",
   "engines": {
-    "vscode": "^0.10.1"
+    "vscode": "^1.78.0"
   },
-  "homepage": "https://github.com/timmyreilly/TypewriterNoises-VSCode",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/timmyreilly/TypewriterNoises-VSCode"
-  },
-  "keywords": [
-    "Sound",
-    "keyboard",
-    "fun",
-    "readme",
-    "repo"
-  ],
-  "icon": "icon.png",
-  "license": "MIT",
   "categories": [
     "Other"
   ],
   "activationEvents": [
     "*"
   ],
-  "main": "./out/src/extension",
+  "main": "./dist/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "extension.sayHello",
+        "command": "typewriter-sounds.helloWorld",
         "title": "Hello World"
       }
     ]
   },
   "scripts": {
-    "vscode:prepublish": "node ./node_modules/vscode/bin/compile",
-    "compile": "node ./node_modules/vscode/bin/compile -watch -p ./",
-    "pretest": "tsc",
-    "test": "mocha --ui tdd ./out/test/extension.test.js"
+    "vscode:prepublish": "npm run package",
+    "compile": "webpack",
+    "watch": "webpack --watch",
+    "package": "webpack --mode production --devtool hidden-source-map",
+    "compile-tests": "tsc -p . --outDir out",
+    "watch-tests": "tsc -p . -w --outDir out",
+    "pretest": "npm run compile-tests && npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
   },
   "devDependencies": {
-    "typescript": "^1.6.2",
-    "vscode": "0.10.x"
+    "@types/glob": "^8.1.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "16.x",
+    "@types/vscode": "^1.78.0",
+    "@typescript-eslint/eslint-plugin": "^5.59.1",
+    "@typescript-eslint/parser": "^5.59.1",
+    "@vscode/test-electron": "^2.3.0",
+    "eslint": "^8.39.0",
+    "glob": "^8.1.0",
+    "mocha": "^10.2.0",
+    "ts-loader": "^9.4.2",
+    "typescript": "^5.0.4",
+    "webpack": "^5.81.0",
+    "webpack-cli": "^5.0.2"
   },
   "dependencies": {
-    "play-sound": "0.0.7"
+    "play": "^0.5.0",
+    "play-sound": "^1.1.5",
+    "sound-play": "^1.1.0"
   }
 }
