@@ -1,0 +1,32 @@
+{
+  "name": "find-exec",
+  "version": "1.0.2",
+  "description": "Finds first available shell command from a list.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test/all.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shime/find-exec.git"
+  },
+  "keywords": [
+    "find",
+    "executable",
+    "shell",
+    "minimalistic",
+    "command",
+    "line"
+  ],
+  "author": "Hrvoje Simic <shime.ferovac@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shime/find-exec/issues"
+  },
+  "homepage": "https://github.com/shime/find-exec",
+  "devDependencies": {
+    "expect.js": "^0.3.1",
+    "mocha": "^5.2.0"
+  },
+  "dependencies": {}
+}
