@@ -1,71 +1,34 @@
-# typewriter-sounds README
+# Typewriter Noises for Visual Studio Code 
 
-This is the README for your extension "typewriter-sounds". After writing up a brief description, we recommend including the following sections.
+Start typing your readme for awesome typewriter sounds. 
 
-## Features
+Support for Windows and Mac. 
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+### here's the repo: https://github.com/timmyreilly/TypewriterNoises-VSCode
 
-For example if there is an image subfolder under your extension project workspace:
 
-\!\[feature X\]\(images/feature-x.png\)
+To install and use...
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+* ctrl+shift+p in Visual Studio Code
+* 'Extensions: Install Extension'
+* 'Typewriter Sounds'
+* Restart VS Code
+* Begin Editing a markdown file!
+* Bask 
 
-## Requirements
+Before I integrate a toggle command the best way to make it stop is...
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+* ctrl+shift+p
+* 'Extensions: Show Installed Extensions'
+* Select the remove box 
 
-## Extension Settings
+[Link to Marketplace](https://marketplace.visualstudio.com/items/timreilly.typewriter-sounds)
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+### Wooo!
+[Icon Credit](http://www.fancyicons.com/free-icon/101/cms-mini-icon-set/free-publish-icon-png/)
 
-For example:
+Thanks for all the help [Felix Rieseberg](https://github.com/felixrieseberg) & [Jason Poon](https://github.com/jpoon).
 
-This extension contributes the following settings:
+Thank you [Skwire](http://skwire.dcmembers.com/wb/pages/software/swavplayer.php) for the no GUI wav player.  
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+[@timmyreilly](http://twitter.com/timmyreilly)

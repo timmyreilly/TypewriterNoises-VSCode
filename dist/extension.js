@@ -16,13 +16,6 @@ module.exports = require("vscode");
 
 /***/ }),
 /* 3 */
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("child_process");
-
-/***/ }),
-/* 4 */
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
@@ -69,10 +62,17 @@ exports["default"] = EditorObserver;
 
 
 /***/ }),
-/* 5 */
+/* 4 */
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-module.exports=function(e){var r={};function t(n){if(r[n])return r[n].exports;var o=r[n]={i:n,l:!1,exports:{}};return e[n].call(o.exports,o,o.exports,t),o.l=!0,o.exports}return t.m=e,t.c=r,t.d=function(e,r,n){t.o(e,r)||Object.defineProperty(e,r,{enumerable:!0,get:n})},t.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},t.t=function(e,r){if(1&r&&(e=t(e)),8&r)return e;if(4&r&&"object"==typeof e&&e&&e.__esModule)return e;var n=Object.create(null);if(t.r(n),Object.defineProperty(n,"default",{enumerable:!0,value:e}),2&r&&"string"!=typeof e)for(var o in e)t.d(n,o,function(r){return e[r]}.bind(null,o));return n},t.n=function(e){var r=e&&e.__esModule?function(){return e.default}:function(){return e};return t.d(r,"a",r),r},t.o=function(e,r){return Object.prototype.hasOwnProperty.call(e,r)},t.p="",t(t.s=0)}([function(e,r,t){const{exec:n}=t(1),o=t(2).promisify(n);e.exports={play:async(e,r=.5)=>{const t="darwin"===process.platform?Math.min(2,2*r):r,n="darwin"===process.platform?((e,r)=>`afplay "${e}" -v ${r}`)(e,t):((e,r)=>`powershell -c Add-Type -AssemblyName presentationCore; $player = New-Object system.windows.media.mediaplayer; ${(e=>`$player.open('${e}');`)(e)} $player.Volume = ${r}; $player.Play(); Start-Sleep 1; Start-Sleep -s $player.NaturalDuration.TimeSpan.TotalSeconds;Exit;`)(e,t);try{await o(n)}catch(e){throw e}}}},function(e,r){e.exports=__webpack_require__(3)},function(e,r){e.exports=__webpack_require__(6)}]);
+module.exports=function(e){var r={};function t(n){if(r[n])return r[n].exports;var o=r[n]={i:n,l:!1,exports:{}};return e[n].call(o.exports,o,o.exports,t),o.l=!0,o.exports}return t.m=e,t.c=r,t.d=function(e,r,n){t.o(e,r)||Object.defineProperty(e,r,{enumerable:!0,get:n})},t.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},t.t=function(e,r){if(1&r&&(e=t(e)),8&r)return e;if(4&r&&"object"==typeof e&&e&&e.__esModule)return e;var n=Object.create(null);if(t.r(n),Object.defineProperty(n,"default",{enumerable:!0,value:e}),2&r&&"string"!=typeof e)for(var o in e)t.d(n,o,function(r){return e[r]}.bind(null,o));return n},t.n=function(e){var r=e&&e.__esModule?function(){return e.default}:function(){return e};return t.d(r,"a",r),r},t.o=function(e,r){return Object.prototype.hasOwnProperty.call(e,r)},t.p="",t(t.s=0)}([function(e,r,t){const{exec:n}=t(1),o=t(2).promisify(n);e.exports={play:async(e,r=.5)=>{const t="darwin"===process.platform?Math.min(2,2*r):r,n="darwin"===process.platform?((e,r)=>`afplay "${e}" -v ${r}`)(e,t):((e,r)=>`powershell -c Add-Type -AssemblyName presentationCore; $player = New-Object system.windows.media.mediaplayer; ${(e=>`$player.open('${e}');`)(e)} $player.Volume = ${r}; $player.Play(); Start-Sleep 1; Start-Sleep -s $player.NaturalDuration.TimeSpan.TotalSeconds;Exit;`)(e,t);try{await o(n)}catch(e){throw e}}}},function(e,r){e.exports=__webpack_require__(5)},function(e,r){e.exports=__webpack_require__(6)}]);
+
+/***/ }),
+/* 5 */
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("child_process");
 
 /***/ }),
 /* 6 */
@@ -87,7 +87,7 @@ module.exports = require("util");
 
 "use strict";
 
-const { exec } = __webpack_require__(3);
+const { exec } = __webpack_require__(5);
 const execPromise = (__webpack_require__(6).promisify)(exec);
 /* MAC PLAY COMMAND */
 const macPlayCommand = (path, volume) => `afplay \"${path}\" -v ${volume}`;
@@ -140,7 +140,7 @@ module.exports = {
 
 var fs               = __webpack_require__(9)
   , findExec         = __webpack_require__(10)
-  , spawn            = (__webpack_require__(3).spawn)
+  , spawn            = (__webpack_require__(5).spawn)
   , players          = [
                         'mplayer',
                         'afplay',
@@ -205,7 +205,7 @@ module.exports = require("fs");
 /* 10 */
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-var exec = (__webpack_require__(3).execSync)
+var exec = (__webpack_require__(5).execSync)
 var platform = (__webpack_require__(11).platform)()
 
 module.exports = function(){
@@ -262,7 +262,7 @@ else{
   // not the browser, worst env check ever
   var http = __webpack_require__(13), 
       colors = __webpack_require__(14), 
-      spawn = (__webpack_require__(3).spawn),
+      spawn = (__webpack_require__(5).spawn),
       child;
 
   var play = exports;
@@ -1232,8 +1232,8 @@ exports.deactivate = exports.AudioPlay = exports.activate = void 0;
 // Import the module and reference it with the alias vscode in your code below
 const path = __webpack_require__(1);
 const vscode = __webpack_require__(2);
-const editor_1 = __webpack_require__(4);
-const sound = __webpack_require__(5);
+const editor_1 = __webpack_require__(3);
+const sound = __webpack_require__(4);
 const ourSound = __webpack_require__(7);
 var player = __webpack_require__(8)({});
 var pplay = (__webpack_require__(12).Play);
